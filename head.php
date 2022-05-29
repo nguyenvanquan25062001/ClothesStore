@@ -18,35 +18,34 @@
   <body>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
    <div class="container-fluid">
-                    <div>
-                       <a href="index.php"><img src="img/ClothesStore1.png" style="height: 180px;width:180px"></a>
-                    </div>
-              <div class="header--fomt">
-                <div class="header_0">
-                        <div>
-                          <a href="sanpham.php" class="header_2-link" ></a>
-                         </div>   
-                        <div class="header_3">
-                          <form class="d-flex">
-                              <a class="nav-link" href="donhang.php"> <i class="fas fa-clipboard-list" style="color:white"></i></i>Đơn hàng</a>
-                              <a class="nav-link" href="giohang.php"> <i class="fas fa-cart-plus" style="color:white"></i>Giỏ hàng</a>
-                              <li class="nav-link nav-link-3">
-                                <?php
-                                  if(!isset($_SESSION["username"])){
-                                  echo '<a class="nav-link nav-link-3" href="login.php"><i class="fa-solid fa-child"></i>Đăng Nhập</a>';
-                                  }
-                                  else echo ('<a class="nav-link nav-link-3"><i class="fa-solid fa-child"></i>'.$_SESSION["username"].'</a>
-            
-                                  <ul class="header__navbar-user-menu">
-                                      <li class="header__navbar-user-item header__navbar-user-item--separate">
-                                          <a href="logout.php">Đăng Xuất</a>
-                                      </li>
-                                  </ul>');
-                                ?>
-                              </li>
-                        </form>
-                </div>
-              </div>
+    <div>
+        <a href="index.php"><img src="img/ClothesStore1.png" style="height: 180px;width:180px"></a>
+    </div>
+    <div class="header">
+      <div class="header_0">
+        <div>
+          <a href="sanpham.php" class="header_2-link" ></a>
+        </div>   
+        <div class="header_3">
+        <form class="d-flex">
+            <a class="nav-link" href="donhang.php"> <i class="fas fa-clipboard-list" style="color:white"></i></i> Đơn hàng</a>
+            <a class="nav-link" href="giohang.php"> <i class="fas fa-cart-plus" style="color:white"></i> Giỏ hàng</a>
+            <li class="nav-link nav-link-3">
+              <?php
+                if(!isset($_SESSION["username"])){
+                  echo '<a class="nav-link nav-link-3" href="login.php"><i class="fa-solid fa-child"></i> Đăng Nhập</a>';
+                }
+                else echo ('<a class="nav-link nav-link-3"><i class="fa-solid fa-child"></i>'.$_SESSION["username"].'</a>
+                <ul class="header__navbar-user-menu">
+                    <li class="header__navbar-user-item header__navbar-user-item--separate">
+                        <a href="logout.php"> Đăng Xuất</a>
+                    </li>
+                </ul>');
+              ?>
+            </li>
+          </form>
+        </div>
+      </div>
     </div>
  </nav>
 
