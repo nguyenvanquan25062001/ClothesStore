@@ -20,7 +20,7 @@ if(isset($_POST["submit"])) {
     if(copy($file_tmp,'img/'.$file_name.'')){
         ?>
         <script>
-                    alert('Đăng ký thành công.');
+                    alert('Thêm sản phẩm thành công.');
                     location.href = "./home_admin.php";
         </script>
         <?php

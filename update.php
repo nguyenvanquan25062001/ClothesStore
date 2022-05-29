@@ -12,7 +12,7 @@
     <form action="update_process.php" method = "POST" enctype="multipart/form-data">
         
         <label class="form-label">Tên sản phẩm:</label>
-        <input type="text" class="form-control" name="tensanpham">
+        <input type="text" class="form-control" name="tensanpham" >
 
         <label class="form-label">Mã sản phẩm:</label>
         <input type="text" class="form-control" name="masanpham" maxlength="5">
