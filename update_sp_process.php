@@ -9,11 +9,11 @@
     $size = $_POST['size'];
     $gia = $_POST['price'];
     $mota = $_POST['description'];
-    $file_tmp = $_FILES['image']['tmp_name'];
-    $file_name = $_FILES['image']['name'];
+    // $file_tmp = $_FILES['image']['tmp_name'];
+    // $file_name = $_FILES['image']['name'];
 
-    $sql="UPDATE sanpham SET TenSP='$TenSP', LoaiSP='$Loai', Mau='$mau', Size='$size', Gia='$gia', mota='$mota', anh='$file_name' where MaSP = '$MaSP'";
+    $sql="UPDATE sanpham SET TenSP='$TenSP', LoaiSP='$Loai', Mau='$mau', Size='$size', Gia='$gia', mota='$mota'  where MaSP = '$MaSP'";
     $result=mysqli_query($conn, $sql);
-    copy($file_tmp,'img/'.$file_name.'');
+    // copy($file_tmp,'img/'.$file_name.'');
     header('Location: quanlysanpham.php');
 ?>

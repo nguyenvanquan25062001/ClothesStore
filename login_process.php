@@ -1,9 +1,6 @@
 <?php
     // Kiểm tra đăng nhập
     session_start();
-    if(!isset($_SESSION["username"])){
-        header("Location:../index.php");
-    }
     // Lấy thông tin đã nhập
     $username = $_POST['username'];
     $pass   = $_POST['password'];
@@ -21,15 +18,14 @@
     if(mysqli_num_rows($result) > 0){
         $_SESSION["username"] = $username;
         $row = mysqli_fetch_assoc($result);
-        if ($row['permission']){
+        if ($row['permission'])
             header("Location:home_admin.php");
-        }else{
-            header("Location:index.php");
-        }
+        else
+            header("Location:./index.php");
     }else{
         echo '<div style="text-align:center">';
-        echo '<h1>Sai tên đăng nhập hoặc mật khẩu.</h1>';
-        echo '<a href="login.php">Thử lại</a>';
+            echo '<h1>Sai tên đăng nhập hoặc mật khẩu.</h1>';
+            echo '<a href="login.php">Thử lại</a>';
         echo '</div>';
     }
 ?>

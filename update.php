@@ -12,25 +12,25 @@
     <form action="update_process.php" method = "POST" enctype="multipart/form-data">
         
         <label class="form-label">Tên sản phẩm:</label>
-        <input type="text" class="form-control" name="tensanpham" >
+        <input type="text" class="form-control" name="tensanpham" required>
 
         <label class="form-label">Mã sản phẩm:</label>
-        <input type="text" class="form-control" name="masanpham" maxlength="5">
+        <input type="text" class="form-control" name="masanpham" maxlength="5"required>
 
         <label class="form-label">loại:</label>
-        <input type="text" class="form-control" name="loai">
+        <input type="text" class="form-control" name="loai"required>
 
         <label class="form-label">Size:</label>
-        <input type="text" class="form-control" name="size">
+        <input type="text" class="form-control" name="size"required>
         
         <label class="form-label">Màu Sắc:</label>
-        <input type="text" class="form-control" name="mau">
+        <input type="text" class="form-control" name="mau"required>
 
         <label class="form-label">giá bán:</label>
-        <input type="number" class="form-control" name="gia">
+        <input type="number" class="form-control" name="gia" required>
 
         <label class="form-label">Mô tả:</label>
-        <textarea type="text" class="form-control" rows="5" name="mota"></textarea>
+        <textarea type="text" class="form-control" rows="5" name="mota" required></textarea>
 
         <label class="form-lable">Ảnh Minh Hoạ</label>
         <div >
